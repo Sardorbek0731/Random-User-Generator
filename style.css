@@ -3,12 +3,17 @@
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+body {
+  position: relative;
+  height: 100%;
+}
 .hidden {
   display: none;
 }
 
 .container {
   padding: 0 7rem;
+  padding-bottom: 5rem;
 }
 
 .header {
@@ -69,12 +74,11 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 5rem;
 }
 .user_item {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: white;
   width: 20%;
   height: 27rem;
@@ -118,4 +122,16 @@
   font-size: 0.9rem;
   font-weight: 380;
   color: rgb(2, 2, 104);
+}
+.by {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.by h1,
+.by h1 a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: rgb(3, 3, 97);
+  font-weight: 400;
 }
