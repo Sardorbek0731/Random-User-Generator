@@ -17,7 +17,7 @@ function getData() {
                     <h1>${data.results[i].name.title} ${data.results[i].name.first} ${data.results[i].name.last}</h1>
                 </div>
                 <div class="userItem_age">
-                    <h1>${data.results[i].dob.age} years old</h1>
+                    <h1><i class="fa-solid fa-calendar-days"></i>${data.results[i].dob.age} years old</h1>
                 </div>
                 <div class="userItem_addres">
                 <i class="fa-sharp fa-solid fa-location-dot"></i>

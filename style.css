@@ -24,6 +24,22 @@
   color: #cda274;
   font-weight: 390;
 }
+.header_right {
+  display: flex;
+}
+.search {
+  margin-right: 5rem;
+}
+.search input {
+  border: none;
+  border-bottom: 2px solid #cda274;
+  outline: none;
+  width: 20rem;
+  height: 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 7px;
+  padding: 0 0.5rem;
+}
 .mode {
   display: flex;
   justify-content: space-between;
@@ -63,11 +79,11 @@
   width: 20%;
   height: 27rem;
   padding: 2rem 2rem;
-  border-radius: 15px;
-  box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.2);
 }
 .userItem_image img {
-  border-radius: 15px;
+  border-radius: 10px;
   width: 100%;
   height: auto;
 }
@@ -91,7 +107,8 @@
   align-items: center;
 }
 .userItem_addres i,
-.userItem_email i {
+.userItem_email i,
+.userItem_age i {
   margin-right: 0.7rem;
 }
 .userItem_email a {
