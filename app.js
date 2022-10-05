@@ -1,4 +1,5 @@
-const userItems = document.getElementById("user-items");
+const userItemFirstRow = document.getElementById("user-item-first-row");
+const userItemSecondRow = document.getElementById("user-item-second-row");
 const refresh = document.getElementById("refresh");
 const search = document.getElementById("search");
 
@@ -9,9 +10,9 @@ function getData() {
     if (request.readyState === 4 && request.status === 200) {
       let userItem = "";
       let data = JSON.parse(request.responseText);
-      for (let i = 0; i < data.results.length; i++) {
+      for (let i = 0; i < 3; i++) {
         userItem = `
-          <div class="user_item">
+            <div class="user_item">
               <div class="userItem_image">
                   <img src="${data.results[i].picture.large}" alt="Image" />
               </div>
@@ -37,20 +38,51 @@ function getData() {
               </div>
           </div>  
         `;
-        userItems.innerHTML += userItem;
+        userItemFirstRow.innerHTML += userItem;
+      }
+      for (let i = 3; i < 6; i++) {
+        userItem = `
+            <div class="user_item">
+              <div class="userItem_image">
+                  <img src="${data.results[i].picture.large}" alt="Image" />
+              </div>
+
+              <div class="userItem_name" id="user-item-name">
+                  <h1>${data.results[i].name.title} ${data.results[i].name.first} ${data.results[i].name.last}</h1>
+              </div>
+
+              <div class="userItem_age">
+                  <h1><i class="fa-solid fa-calendar-days"></i>${data.results[i].dob.age} years old</h1>
+              </div>
+
+              <div class="userItem_addres">
+                  <i class="fa-sharp fa-solid fa-location-dot"></i>
+                  <h1>${data.results[i].location.country}, ${data.results[i].location.city}</h1>
+              </div>
+
+              <div class="userItem_email">
+                  <i class="fa-solid fa-envelope"></i>
+                  <a href="#">
+                      <h1>${data.results[i].email}</h1>
+                  </a>
+              </div>
+          </div>  
+        `;
+        userItemSecondRow.innerHTML += userItem;
       }
     } else if (request.readyState === 4) {
       console.log("Ma'lumotni olish imkoni bo'lmadi");
     }
   });
 
-  request.open("GET", "https://randomuser.me/api/?results=3");
+  request.open("GET", "https://randomuser.me/api/?results=6");
   request.send();
 }
 getData();
 
 refresh.addEventListener("click", () => {
-  userItems.innerHTML = "";
+  userItemFirstRow.innerHTML = "";
+  userItemSecondRow.innerHTML = "";
   getData();
 });
 
