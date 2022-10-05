@@ -123,6 +123,24 @@ body {
   font-weight: 380;
   color: rgb(2, 2, 104);
 }
+.refresh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 5rem;
+}
+.refresh button {
+  background-color: #cda274;
+  border: none;
+  outline: none;
+  padding: 1rem 3rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 7px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
 .by {
   position: absolute;
   right: 20px;

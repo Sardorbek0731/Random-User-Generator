@@ -1,4 +1,5 @@
 const userItems = document.getElementById("user-items");
+const refresh = document.getElementById("refresh");
 
 function getData() {
   let request = new XMLHttpRequest();
@@ -9,27 +10,31 @@ function getData() {
       let data = JSON.parse(request.responseText);
       for (let i = 0; i < data.results.length; i++) {
         userItem = `
-            <div class="user_item">
-                <div class="userItem_image">
-                    <img src="${data.results[i].picture.large}" alt="Image" />
-                </div>
-                <div class="userItem_name">
-                    <h1>${data.results[i].name.title} ${data.results[i].name.first} ${data.results[i].name.last}</h1>
-                </div>
-                <div class="userItem_age">
-                    <h1><i class="fa-solid fa-calendar-days"></i>${data.results[i].dob.age} years old</h1>
-                </div>
-                <div class="userItem_addres">
-                <i class="fa-sharp fa-solid fa-location-dot"></i>
-                    <h1>${data.results[i].location.country}, ${data.results[i].location.city}</h1>
-                </div>
-                <div class="userItem_email">
-                <i class="fa-solid fa-envelope"></i>
-                    <a href="#">
-                        <h1>${data.results[i].email}</h1>
-                    </a>
-                </div>
-            </div>  
+          <div class="user_item">
+              <div class="userItem_image">
+                  <img src="${data.results[i].picture.large}" alt="Image" />
+              </div>
+
+              <div class="userItem_name">
+                  <h1>${data.results[i].name.title} ${data.results[i].name.first} ${data.results[i].name.last}</h1>
+              </div>
+
+              <div class="userItem_age">
+                  <h1><i class="fa-solid fa-calendar-days"></i>${data.results[i].dob.age} years old</h1>
+              </div>
+
+              <div class="userItem_addres">
+                  <i class="fa-sharp fa-solid fa-location-dot"></i>
+                  <h1>${data.results[i].location.country}, ${data.results[i].location.city}</h1>
+              </div>
+
+              <div class="userItem_email">
+                  <i class="fa-solid fa-envelope"></i>
+                  <a href="#">
+                      <h1>${data.results[i].email}</h1>
+                  </a>
+              </div>
+          </div>  
         `;
         userItems.innerHTML += userItem;
       }
@@ -42,3 +47,8 @@ function getData() {
   request.send();
 }
 getData();
+
+refresh.addEventListener("click", () => {
+  userItems.innerHTML = "";
+  getData();
+});
