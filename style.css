@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.hidden {
+  display: none;
+}
+
+.container {
+  padding: 0 7rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 0 7%;
+  width: 86%;
+  background-color: white;
+}
+.user_header h1 {
+  color: #cda274;
+  font-weight: 390;
+}
+.mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mode_item svg {
+  cursor: pointer;
+}
+
+.title {
+  width: 100%;
+  height: 12rem;
+  background: url(./Image/bg.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.title h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: white;
+}
+
+#user-items {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+.user_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  width: 20%;
+  height: 27rem;
+  padding: 2rem 2rem;
+  border-radius: 15px;
+  box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.3);
+}
+.userItem_image img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+}
+.userItem_name h1 {
+  font-size: 1.4rem;
+  font-weight: 380;
+  color: black;
+}
+.userItem_age h1,
+.userItem_addres h1 {
+  font-size: 1.2rem;
+  font-weight: 380;
+  color: black;
+}
+.userItem_addres {
+  display: flex;
+  align-items: center;
+}
+.userItem_email {
+  display: flex;
+  align-items: center;
+}
+.userItem_addres i,
+.userItem_email i {
+  margin-right: 0.7rem;
+}
+.userItem_email a {
+  text-decoration: none;
+}
+.userItem_email a h1 {
+  font-size: 0.9rem;
+  font-weight: 380;
+  color: rgb(2, 2, 104);
+}
