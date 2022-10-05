@@ -1,5 +1,6 @@
 const userItems = document.getElementById("user-items");
 const refresh = document.getElementById("refresh");
+const search = document.getElementById("search");
 
 function getData() {
   let request = new XMLHttpRequest();
@@ -15,7 +16,7 @@ function getData() {
                   <img src="${data.results[i].picture.large}" alt="Image" />
               </div>
 
-              <div class="userItem_name">
+              <div class="userItem_name" id="user-item-name">
                   <h1>${data.results[i].name.title} ${data.results[i].name.first} ${data.results[i].name.last}</h1>
               </div>
 
@@ -51,4 +52,17 @@ getData();
 refresh.addEventListener("click", () => {
   userItems.innerHTML = "";
   getData();
+});
+
+search.addEventListener("input", () => {
+  let inputValue = search.value.toLowerCase();
+  const userItemName = document.querySelectorAll("#user-item-name");
+
+  userItemName.forEach((itemName) => {
+    if (itemName.textContent.toLowerCase().includes(inputValue)) {
+      itemName.parentElement.style.display = "flex";
+    } else {
+      itemName.parentElement.style.display = "none";
+    }
+  });
 });

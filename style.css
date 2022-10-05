@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  padding: 0 7rem;
+  padding: 0 4rem;
   padding-bottom: 5rem;
 }
 
@@ -73,7 +73,7 @@ body {
 #user-items {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .user_item {
   display: flex;
