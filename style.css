@@ -12,8 +12,14 @@ body {
 }
 
 .container {
-  padding: 0 4rem;
-  padding-bottom: 5rem;
+  padding: 5rem 4rem;
+}
+body.dark-mode {
+  background-color: rgb(12, 2, 50);
+}
+body.dark-mode .by a,
+body.dark-mode .by h1 {
+  color: white;
 }
 
 .header {
@@ -24,6 +30,9 @@ body {
   padding: 0 7%;
   width: 86%;
   background-color: white;
+}
+body.dark-mode .header {
+  background-color: rgb(12, 2, 50);
 }
 .user_header h1 {
   color: #cda274;
@@ -44,6 +53,7 @@ body {
   font-size: 1.1rem;
   border-radius: 7px;
   padding: 0 0.5rem;
+  background-color: transparent;
 }
 .mode {
   display: flex;
@@ -62,7 +72,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5rem;
 }
 .title h1 {
   font-size: 2.5rem;

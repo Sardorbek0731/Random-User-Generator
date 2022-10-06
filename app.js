@@ -3,6 +3,9 @@ const userItemSecondRow = document.getElementById("user-item-second-row");
 const userItemThreethRow = document.getElementById("user-item-threeth-row");
 const refresh = document.getElementById("refresh");
 const search = document.getElementById("search");
+const darkMode = document.getElementById("dark-mode");
+const lightMode = document.getElementById("light-mode");
+const body = document.querySelector("body");
 
 function getData() {
   let request = new XMLHttpRequest();
@@ -129,4 +132,24 @@ search.addEventListener("input", () => {
       itemName.parentElement.style.display = "none";
     }
   });
+});
+
+// Mode
+let storageMode = JSON.parse(localStorage.getItem("mode"));
+
+if (storageMode) mode();
+
+function mode() {
+  body.classList.toggle("dark-mode");
+  lightMode.classList.toggle("hidden");
+  darkMode.classList.toggle("hidden");
+}
+
+darkMode.addEventListener("click", () => {
+  mode();
+  localStorage.setItem("mode", JSON.stringify("dark-mode"));
+});
+lightMode.addEventListener("click", () => {
+  mode();
+  localStorage.setItem("mode", JSON.stringify(""));
 });
