@@ -69,11 +69,13 @@ body {
   font-weight: 400;
   color: white;
 }
-.userItem_first_row {
+.userItem_first_row,
+.userItem_second_row {
   margin-bottom: 5rem;
 }
 .userItem_first_row,
-.userItem_second_row {
+.userItem_second_row,
+.userItem_threeth_row {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -87,7 +89,7 @@ body {
   height: 27rem;
   padding: 2rem 2rem;
   border-radius: 10px;
-  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.14);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.17);
 }
 .userItem_image img {
   border-radius: 10px;
