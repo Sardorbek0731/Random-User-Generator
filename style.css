@@ -115,6 +115,7 @@ body.dark-mode .search input {
   font-size: 2.5rem;
   font-weight: 400;
   color: white;
+  user-select: none;
 }
 .userItem_first_row,
 .userItem_second_row {
