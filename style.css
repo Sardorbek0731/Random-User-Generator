@@ -44,6 +44,10 @@ body.dark-mode .by h1 {
   border-right: 7px solid black;
   animation: loader 2s linear infinite;
 }
+body.dark-mode .loading_item {
+  border-top: 7px solid white;
+  border-right: 7px solid white;
+}
 @keyframes loader {
   0% {
     transform: rotate(0);
