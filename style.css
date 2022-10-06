@@ -24,6 +24,7 @@ body.dark-mode .by h1 {
 
 /* Loading */
 .loading {
+  z-index: 10;
   justify-content: center;
   align-items: center;
   position: fixed;
