@@ -6,6 +6,7 @@ const search = document.getElementById("search");
 const darkMode = document.getElementById("dark-mode");
 const lightMode = document.getElementById("light-mode");
 const body = document.querySelector("body");
+const loader = document.getElementById("loader");
 
 function getData() {
   let request = new XMLHttpRequest();
@@ -106,6 +107,12 @@ function getData() {
       }
     } else if (request.readyState === 4) {
       console.log("Ma'lumotni olish imkoni bo'lmadi");
+    }
+
+    if (request.readyState === 4) {
+      loader.style.display = "none";
+    } else {
+      loader.style.display = "flex";
     }
   });
 
