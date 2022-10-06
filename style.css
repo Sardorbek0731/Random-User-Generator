@@ -86,6 +86,9 @@ body.dark-mode .header {
   padding: 0 0.5rem;
   background-color: transparent;
 }
+body.dark-mode .search input {
+  color: white;
+}
 .mode {
   display: flex;
   justify-content: space-between;
